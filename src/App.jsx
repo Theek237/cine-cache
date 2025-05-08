@@ -1,7 +1,58 @@
 import React from "react";
+import StarRating from "./components/StarRating";
+import TextExpander from "./components/TextExpander";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <div className="flex flex-col gap-10">
+      {/* <StarRating
+        maxRating={5}
+        color="blue"
+        fontSize="40"
+        starSize="100"
+        messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
+      />
+      <StarRating /> */}
+      <TextExpander>
+        Cinema has been a transformative art form since its inception in the
+        late 19th century. From the silent films of Charlie Chaplin to the
+        groundbreaking visual effects of modern blockbusters, the evolution of
+        filmmaking techniques has continuously pushed the boundaries of
+        storytelling. Directors like Alfred Hitchcock, Stanley Kubrick, and
+        Akira Kurosawa redefined what was possible through the camera lens,
+        influencing generations of filmmakers to come.
+      </TextExpander>
+      <TextExpander
+        collapsedNumWords={20}
+        expandButtonText="Show Text"
+        collapseButtonText="Collapse"
+        buttonColor="#ff6622"
+      >
+        Film preservation represents one of the most critical challenges facing
+        the cinematic world today. Many early films were recorded on nitrate
+        film, which is highly flammable and deteriorates rapidly. Archives
+        around the world work tirelessly to restore and digitize these fragile
+        pieces of cultural history before they are lost forever. The process
+        involves meticulous frame-by-frame restoration, color correction, and
+        audio enhancement. Without these efforts, significant portions of our
+        shared cinematic heritage would simply disappear. Organizations like the
+        Film Foundation, established by Martin Scorsese, have been instrumental
+        in raising awareness about the importance of film preservation.
+      </TextExpander>
+      <TextExpander>
+        The rise of streaming platforms has fundamentally altered how audiences
+        consume and engage with film content. Services like Netflix, Amazon
+        Prime, and Disney+ have created unprecedented access to diverse films
+        from around the world, while simultaneously challenging traditional
+        theatrical distribution models. This shift has sparked debates about the
+        future of cinema, with some lamenting the decline of the communal
+        theater experience while others celebrate the democratization of access.
+        Independent filmmakers now have more avenues to reach audiences, though
+        discoverability remains a significant hurdle in an increasingly crowded
+        digital landscape.
+      </TextExpander>
+    </div>
+  );
 }
 
 export default App;
